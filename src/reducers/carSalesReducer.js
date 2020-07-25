@@ -43,6 +43,10 @@ export const carSalesReducer = (state = initialState, action) => {
             ...state.car.features.filter((feature) => feature.id !== action.payload.id),
           ],
         },
+        additionalFeatures: [
+          ...state.additionalFeatures,
+          action.payload
+        ]
       };
     default:
       return state;
